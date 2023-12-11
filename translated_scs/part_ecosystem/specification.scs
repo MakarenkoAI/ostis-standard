@@ -22,13 +22,8 @@ part_8_ecosystem_of_intelligent_computer_systems_of_the_new_generation_and_their
     -> rrel_key_sc_element: concept_process_element;
     -> rrel_key_sc_element: concept_procedural_element;
 
-    => nrel_purpose: [<p>Сформировать мотивацию и инфраструктуру для создания эволюции информационных технологий принципиально нового уровня, в основе которого лежат семантические совместимые интеллектуальные компьютерные системы, способные согласовывать свои действия в заранее непредсказуемых обстоятельствах.</p>
-                        <p>Обеспечить перманентную поддержку эволюции и семантической совместимости всех входящих в нее систем, на протяжении всего их жизненного цикла.</p>](* <- lang_ru;; => nrel_format: format_html;;*);
-    => nrel_note: [<p>Описаны технологии автоматизации видов человеческой деятельности.</p> 
-                    <p>Описаны виды деятельности в области искусственного интеллекта.</p>
-                    <p>Проанализированы текущее состояние и проблемы развития искусственного интеллекта.</p>
-                    <p>Перспективы технологии OSTIS.</p>
-                    <p>Описание метасистемы ostis-систем.</p>] (* <- lang_ru;; => nrel_format: format_html;;*);
+    => nrel_purpose: [Сформировать мотивацию и инфраструктуру для создания эволюции информационных технологий принципиально нового уровня, в основе которого лежат семантические совместимые интеллектуальные компьютерные системы, способные согласовывать свои действия в заранее непредсказуемых обстоятельствах. Обеспечить перманентную поддержку эволюции и семантической совместимости всех входящих в нее систем, на протяжении всего их жизненного цикла.](* <- lang_ru;; => nrel_format: format_html;;*);
+    => nrel_note: [Описаны технологии автоматизации видов человеческой деятельности. Описаны виды деятельности в области искусственного интеллекта. Проанализированы текущее состояние и проблемы развития искусственного интеллекта. Перспективы технологии OSTIS. Описание метасистемы ostis-систем.] (* <- lang_ru;; => nrel_format: format_html;;*);
     => nrel_authors: ... (* 
         -> Zagorcky;;
         -> Bantsevich;;
@@ -46,6 +41,6 @@ part_8_ecosystem_of_intelligent_computer_systems_of_the_new_generation_and_their
         *);
     => nrel_component_dependencies: ... (* <- empty_set;; *);
 
-    => nrel_component_address: [https://github.com/PetrochukKsenija/part_8_component] (* <- concept_github_url;; *);
+    => nrel_component_address: [https://github.com/ostis-ai/ostis-standard/tree/main/translated_scs/part_ecosystem] (* <- concept_github_url;; *);
     => nrel_installation_method: ... (* <- concept_component_dynamically_installed_method;; *);;
 *];;

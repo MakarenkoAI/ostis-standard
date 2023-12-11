@@ -21,6 +21,6 @@ part_7_methods_and_tools_of_reengineering_and_use_of_intelligent_computer_system
         *);
     => nrel_component_dependencies: ... (* <- empty_set;; *);
 
-    => nrel_component_address: [https://github.com/PetrochukKsenija/part_7_component] (* <- concept_github_url;; *);
+    => nrel_component_address: [https://github.com/ostis-ai/ostis-standard/tree/main/translated_scs/part_support] (* <- concept_github_url;; *);
     => nrel_installation_method: ... (* <- concept_component_dynamically_installed_method;; *);;
 *];;
