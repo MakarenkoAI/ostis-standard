@@ -1,0 +1,354 @@
+concept_presentation
+=> nrel_main_idtf: [presenattion] (* <- lang_en;; *);
+=> nrel_main_idtf: [презентация] (* <- lang_ru;; *);;
+
+presentation_OSTIS
+<- concept_presentation;
+=> nrel_main_idtf: [presenattion about OSTIS Technology] (* <- lang_en;; *);
+=> nrel_main_idtf: [Презентация о Технологии OSTIS] (* <- lang_ru;; *);
+=> nrel_decomposition: presentation_OSTIS_decomposition;;
+
+presentation_OSTIS_decomposition             
+<- sc_node_tuple;
+=> nrel_main_idtf:
+	[Декомпозиция Презентация о Технологии OSTIS]
+	(* <- lang_ru;; *);
+	[Presenattion about OSTIS Technology decomposition]
+	(* <- lang_en;; *);;
+
+@arc1 = (presentation_OSTIS_decomposition -> rrel_1: slide_1);;
+@arc2 = (presentation_OSTIS_decomposition -> slide_2);;
+@arc3 = (presentation_OSTIS_decomposition -> slide_3);;
+@arc4 = (presentation_OSTIS_decomposition -> slide_4);;
+@arc5 = (presentation_OSTIS_decomposition -> slide_5);;
+@arc6 = (presentation_OSTIS_decomposition -> slide_6);;
+@arc7 = (presentation_OSTIS_decomposition -> slide_7);;
+@arc8 = (presentation_OSTIS_decomposition -> slide_8);;
+@arc9 = (presentation_OSTIS_decomposition -> slide_9);;
+
+@arc1 => nrel_basic_sequence: @arc2;;
+@arc2 => nrel_basic_sequence: @arc3;;
+@arc3 => nrel_basic_sequence: @arc4;;
+@arc4 => nrel_basic_sequence: @arc5;;
+@arc5 => nrel_basic_sequence: @arc6;;
+@arc6 => nrel_basic_sequence: @arc7;;
+@arc7 => nrel_basic_sequence: @arc8;;
+@arc8 => nrel_basic_sequence: @arc9;;
+rrel_last ~> @arc9;;
+
+nrel_next_slide
+<-sc_node_norole_relation;
+<- oriented_relation;
+=> nrel_main_idtf:
+	[следующий слайд]
+	(* <- lang_ru;; *);
+	[next slide]
+	(* <- lang_en;; *);;
+
+slide_1           
+-> rrel_key_sc_element: .system_element_759;
+<- not_enough_formed_structure;
+=> nrel_next_slide: slide_2;
+=> nrel_main_idtf:
+	[Cлайд 1. Стандарт OSTIS]
+	(* <- lang_ru;; *);
+	[Slide 1. OSTIS Standard]
+	(* <- lang_en;; *);;
+
+slide_2          
+-> rrel_key_sc_element: technology_OSTIS;
+<- not_enough_formed_structure;
+=> nrel_next_slide: slide_3;
+=> nrel_main_idtf:
+	[Cлайд 2. Технология OSTIS]
+	(* <- lang_ru;; *);
+	[Slide 2. OSTIS technology]
+	(* <- lang_en;; *);;
+
+slide_3          
+-> rrel_key_sc_element: .system_element_758;
+<- not_enough_formed_structure;
+=> nrel_next_slide: slide_4;
+=> nrel_main_idtf:
+	[Cлайд 3. Метасистема OSTIS]
+	(* <- lang_ru;; *);
+	[Slide 3. OSTIS Metasystem]
+	(* <- lang_en;; *);;
+
+slide_4          
+-> rrel_key_sc_element: .system_element_357;
+<- not_enough_formed_structure;
+=> nrel_next_slide: slide_5;
+=> nrel_main_idtf:
+	[Cлайд 4. sc-код]
+	(* <- lang_ru;; *);
+	[Slide 4. sc-code]
+	(* <- lang_en;; *);;
+
+slide_5         
+-> rrel_key_sc_element: scg_code;
+<- not_enough_formed_structure;
+=> nrel_next_slide: slide_6;
+=> nrel_main_idtf:
+	[Cлайд 5. SCg-код]
+	(* <- lang_ru;; *);
+	[Slide 5. SCg-code]
+	(* <- lang_en;; *);;
+
+slide_6       
+-> rrel_key_sc_element: .system_element_1116;
+<- not_enough_formed_structure;
+=> nrel_next_slide: slide_7;
+=> nrel_main_idtf:
+	[Cлайд 6. SCn-код]
+	(* <- lang_ru;; *);
+	[Slide 6. SCn-code]
+	(* <- lang_en;; *);;
+
+slide_7
+-> rrel_key_sc_element: sc_agent; abstract_sc_agent;
+<- not_enough_formed_structure;
+=> nrel_next_slide: slide_8;
+=> nrel_main_idtf:
+	[Cлайд 7. sc-агент]
+	(* <- lang_ru;; *);
+	[Slide 7. sc-agent]
+	(* <- lang_en;; *);;
+
+slide_8
+-> rrel_key_sc_element: .system_element_1986;
+<- not_enough_formed_structure;
+=> nrel_next_slide: slide_9;
+=> nrel_main_idtf:
+	[Cлайд 8. SCP язык]
+	(* <- lang_ru;; *);
+	[Slide 8. SCP]
+	(* <- lang_en;; *);;
+
+slide_9
+-> rrel_key_sc_element: .system_element_760;
+<- not_enough_formed_structure;
+=> nrel_main_idtf:
+	[Cлайд 9. Экосистема OSTIS]
+	(* <- lang_ru;; *);
+	[Slide 9. OSTIS Ecosystem]
+	(* <- lang_en;; *);;
+
+slide_1 = [*
+.system_element_759
+=> nrel_idtf: [Оглавление текущей версии Стандарта OSTIS]
+(*
+	<- lang_ru;;
+	=> nrel_format: format_html;;
+*);
+=> nrel_section_decomposition: {
+	.system_element_5510;
+	.system_element_5511;
+	.system_element_5512;
+	.system_element_5513;
+	.system_element_5514;
+	.system_element_5515;
+	.system_element_5518;
+	.system_element_5533;
+	.system_element_5553;
+	.system_element_5554;
+	.system_element_5573;
+	.system_element_5574;
+	.system_element_5578;
+	.system_element_5593
+};;
+*];;
+
+slide_2 = 
+[*
+technology_OSTIS
+	=> nrel_idtf: [Комплексная открытая семантическая технология проектирования, производства, эксплуатации и реинжиниринга гибридных, семантически совместимых, активных и договороспособных <i>интеллектуальных компьютерных систем</i>]
+	(*
+	<- lang_ru;;
+	=> nrel_format: format_html;;
+	*);
+	-> rrel_key_sc_element: section_composition_of_OSTIS_technology;
+	<- complex_technology_development_of_intelligent_systems;
+	=> nrel_explanation: [Продуктом Технологии OSTIS являются совместимые интеллектуальные системы. Это достигается за счет наличия универсального SC-кода, на котором можно представить все виды знаний.];
+	<- .system_element_2058  (* => nrel_explanation: [С формальной точки зрения каждая технология задается ориентированной связкой, компонентами которой являются:
+			знак множества используемых методов;
+			знак множества используемых инструментов;
+			знак множества дополнительных используемых ресурсов.];;
+		*);;
+*];;
+
+slide_3 = 
+[*
+
+.system_element_758
+<- knowledge_base_Metasystem;
+=> nrel_section_decomposition: metasystem_decomposition;
+<- rrel_key_sc_element: section_faq_ostis_metasystem;;
+*];;
+
+slide_4 = 
+[*
+.system_element_357
+=> .system_element_1120: [Язык унифицированного смыслового представления знаний в памяти интеллектуальных компьютерных систем.]
+(*
+	<- lang_ru;;
+	=> nrel_format: format_html;;
+*);
+=> .system_element_343: ostis_system;
+<- .system_element_355;
+<- .system_element_3537;
+=> nrel_explanation: [Универсальность SC-кода обеспечивается и тем, что элементами текстов SC-кода могут быть знаки описываемых сущностей любого вида, в том числе, и  знаки связей между описываемыми сущностями и/или их знаками.]
+(*
+	<- lang_ru;;
+	=> nrel_format: format_html;;
+*);;
+
+.system_element_355 
+=> .system_element_1120: [Язык, для которого не уточняется способ представления символов (синтаксически элементарных фрагментов), входящих в состав текстов этого языка, а задается только алфавит* этих символов, то есть семейство классов символов, считающихся синтаксически эквивалентными друг другу.]
+(*
+	<- lang_ru;;
+	=> nrel_format: format_html;;
+*);;
+*];;
+
+slide_5 = 
+[*
+scg_code
+=> nrel_idtf: [Semantic Code graphical];
+<- .system_element_1134(* => nrel_idtf: [язык, текстами которого являются рисунки семантичеких сетей];;*);
+<- .system_element_4516;
+<- .system_element_1723;
+<- .system_element_3537;
+=> nrel_note: [<p>Любой <i>sc.g-текст</i> можно легко представить с помощью <i>sc.s-текста</i> и <i>sc.n-текста</i>.</p>]
+	(*
+		<- lang_ru;;
+		=> nrel_format: format_html;;
+		=> .system_element_252: "file://part_kb/src/images/scs/scs_text_example.png"
+		(*
+			<- concept_file;;
+			=> nrel_format: format_png;;
+			<- .system_element_254;;
+		*);;
+		=> .system_element_252: "file://part_kb/src/images/sd_lang/example_scs.png"
+		(*
+			<- concept_file;;
+			=> nrel_format: format_png;;
+			<- .system_element_254;;
+		*);;
+		=> .system_element_252: "file://part_kb/src/images/sd_lang/example_scn.png"
+		(*
+			<- concept_file;;
+			=> nrel_format: format_png;;
+			<- .system_element_254;;
+		*);;
+	*);
+=> .system_element_361: .system_element_3544;;
+
+.system_element_3544 => nrel_example: "file://part_kb/src/images/scg/SCg-core-alphabet.pdf"
+	(*
+		<- concept_file;;
+		=> nrel_format: format_pdf;;
+	*);;
+
+.system_element_3544 =>.system_element_361: .system_element_3776;;
+.system_element_3776
+	=> nrel_inclusion: [*
+
+		sc_element
+		=> nrel_subdividing: {
+			sc_connector
+			(*
+				=> nrel_subdividing: {
+					sc_edge;
+					sc_arc
+					(*
+						=> nrel_subdividing: {
+							.system_element_3617;
+							sc_arc_common
+						};;
+					*)
+				};;
+			*);
+			sc_node
+			(*
+				=> nrel_subdividing: {
+					.system_element_3618;
+					.system_element_3619
+				};;
+			*)
+		};;
+		*];;
+*];;
+
+slide_6 = 
+[*
+.system_element_1116
+=> nrel_idtf: [Semantic Code natural];
+=> nrel_explanation: [Язык структурированного представления знаний ostis-систем];
+=> nrel_explanation: [внешний язык* ostis-систем, тексты которого представляют собой двухмерные матрицы символов, являющиеся результатом форматирования, двухмерной структуризации текстов SCs-кода.];;
+*];;
+
+slide_7 = 
+[*
+sc_agent
+-> internal_subject_ostis_system (* => nrel_explanation: [Под внутренним субъектом ostis-системы понимается такой субъект, который выполняет некоторые действия в той же памяти, в которой хранится его знак. К числу внутренних субъектов ostis-системы относятся входящие в нее sc-агенты, частные sc-машины, целые интеллектуальные подсистемы.];; *);
+<- .system_element_6031;
+<- abstract_sc_agent;;
+
+abstract_sc_agent
+	=> nrel_subdividing: {
+			non_atomic_abstract_sc_agent;
+			atomic_abstract_sc_agent
+		};
+		=> nrel_subdividing: {
+			inside_abstract_sc_agent;
+			effector_abstract_sc_agent;
+			receptor_abstract_sc_agent
+		};
+		=> nrel_subdividing: {
+			abstract_sc_agent_is_not_implemented_on_the_scp_language;
+			abstract_sc_agent_implemented_on_the_scp_language
+		};
+		=> nrel_subdividing: {
+			abstract_sc_agent_of_interpretation_of_scp_program;
+			abstract_program_sc_agent;
+			abstract_sc_metaagent
+		};
+		=> nrel_subdividing: {
+			platform_dependent_abstract_sc_agent
+			(*
+				=> nrel_inclusion: abstract_sc_agent_is_not_implemented_on_the_scp_language;;
+			*);
+			platform_independent_abstract_sc_agent
+		};;
+*];;
+
+slide_8 = 
+[*
+.system_element_1986
+	=> .system_element_1120: [Базовый язык программирования ostis-систем с его синтаксисом, денотационной семантикой и операционной семантикой.];
+	=> nrel_idtf: [Язык программирования SCP (Semantic Code Programming)];
+	=> nrel_explanation: [В качестве базового языка для описания программ обработки текстов<i>SC-кода</i> предлагается <i>Язык SCP</i>.<i>Язык SCP</i> --- это графовый язык процедурного программирования, предназначенный для эффективной обработки <i>sc-текстов</i>. <i>Язык SCP</i> является языком параллельного асинхронного программирования.Языком представления данных для текстов <i>Языка SCP</i> (<i>scp-программ</i>) является <i>SC-код</i> и, соответственно, любые варианты его внешнего представления. <i>Язык SCP</i> сам построен на основе <i>SC-кода</i>, в следствие чего <i>scp-программы</i> сами по себе могут входить в состав обрабатываемых данных для <i>scp-программ</i>, в т.ч. по отношению к самим себе. Таким образом, <i>язык SCP</i> предоставляет возможность построения реконфигурируемых программ. Однако для обеспечения возможности реконфигурирования программы непосредственно в процессе ее интерпретации необходимо на уровне интерпретатора <i>Языка SCP (Aбстрактной scp-машины)</i> обеспечить уникальность каждой исполняемой копии исходной программы. Такую исполняемую копию, сгенерированную на основе <i>scp-программы</i>, будем называть <i>scp-процессом</i>. Включение знака некоторого <i>действия в sc-памяти</i> во множество <i>scp-процессов</i> гарантирует тот факт, что в декомпозиции данного действия будут присутствовать только знаки элементарных действий (<i>scp-операторов</i>), которые может интерпретировать реализация <i>Aбстрактной scp-машины</i> (интерпретатора scp-программ).<i>Язык SCP</i> рассматривается как ассемблер для семантического компьютера.]
+	(*
+	<- lang_ru;;
+	=> nrel_format: format_html;;
+	*);;
+
+*];;
+
+slide_9 = 
+[*
+.system_element_760
+	=> nrel_idtf: [Следующий этап развития человеческого общества, обеспечивающий существенное повышение уровня общественного (коллективного) интеллекта путем преобразования человеческого общества в экосистему, состоящую из людей и семантически совместимых интеллектуальных систем];
+	=> nrel_explanation: [Сверхзадачей <i>Экосистемы OSTIS</i> является не просто комплексная автоматизация всех <i>видов человеческой деятельности</i> (разумеется, только тех видов деятельности, автоматизация которых целесообразна), но и существенное повышение уровня интеллекта различных человеческих (точнее человеко-машинных) сообществ и всего человеческого общества в целом. Это потребует соблюдения ряда требований, предъявляемых не только к <i>интеллектуальным компьютерным системам</i>, но и к людям, входящим в состав <i>Экосистемы OSTIS</i>]
+	(*
+	<- lang_ru;;
+	=> nrel_format: format_html;;
+	*);
+	=> nrel_explanation: [<i>Экосистема OSTIS</i> представляет собой открытый коллектив взаимодействующих интеллектуальных систем, состав которого входят <i>ostis-системы</i> и их пользователи (конечные пользователи и разработчики,участвующие в совершенствование этих <i>ostis-систем</i>). Особое место среди <i>ostis-систем</i>, входящих в состав <i>экосистемы OSTIS</i>, занимают <i>корпоративные ostis-системы</i>, через которое осуществляется координация и эволюция деятельности некоторых групп <i>ostis-систем</i> и их пользователей. Основная цель корпоративных <i>ostis-систем</i> --- локализовать базы знаний указанных групп ostis-систем, перевести их из статуса виртуальных в статус реальных и автоматизировать их эволюцию.]
+	(*
+	<- lang_ru;;
+	=> nrel_format: format_html;;
+	*);;
+
+*];;
